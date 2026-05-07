@@ -1,0 +1,5 @@
+pandas>=3.0,<4
+duckdb>=1.5,<2
+pytest>=9.0,<10
+plotly>=6.7,<7
+PyYAML>=6.0,<7

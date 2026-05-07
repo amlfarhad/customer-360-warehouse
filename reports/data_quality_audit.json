@@ -1,0 +1,91 @@
+{
+  "summary": {
+    "total_checks": 10,
+    "passed": 5,
+    "warnings": 2,
+    "failed": 3,
+    "status": "fail"
+  },
+  "checks": [
+    {
+      "name": "duplicate_crm_accounts",
+      "status": "fail",
+      "severity": "critical",
+      "observed": 5,
+      "threshold": 0,
+      "detail": "5 duplicate account_id values found in CRM accounts."
+    },
+    {
+      "name": "missing_company_size",
+      "status": "warn",
+      "severity": "warning",
+      "observed": 32,
+      "threshold": 0,
+      "detail": "32 CRM accounts are missing company_size."
+    },
+    {
+      "name": "accepted_lifecycle_values",
+      "status": "pass",
+      "severity": "critical",
+      "observed": 0,
+      "threshold": 0,
+      "detail": "0 accounts have invalid lifecycle_stage values."
+    },
+    {
+      "name": "negative_invoice_amount",
+      "status": "fail",
+      "severity": "critical",
+      "observed": 22,
+      "threshold": 0,
+      "detail": "22 invoices have negative amount values."
+    },
+    {
+      "name": "subscription_end_before_start",
+      "status": "fail",
+      "severity": "critical",
+      "observed": 1,
+      "threshold": 0,
+      "detail": "1 subscriptions end before they start."
+    },
+    {
+      "name": "null_product_event_names",
+      "status": "warn",
+      "severity": "warning",
+      "observed": 69,
+      "threshold": 0,
+      "detail": "69 product events have null event_name."
+    },
+    {
+      "name": "mart_customer_health_rows",
+      "status": "pass",
+      "severity": "critical",
+      "observed": 500,
+      "threshold": 1,
+      "detail": "500 customer health rows built."
+    },
+    {
+      "name": "churn_score_bounds",
+      "status": "pass",
+      "severity": "critical",
+      "observed": 0,
+      "threshold": 0,
+      "detail": "0 churn scores outside 0-100."
+    },
+    {
+      "name": "health_score_bounds",
+      "status": "pass",
+      "severity": "critical",
+      "observed": 0,
+      "threshold": 0,
+      "detail": "0 health scores outside 0-100."
+    },
+    {
+      "name": "revenue_account_relationship",
+      "status": "pass",
+      "severity": "critical",
+      "observed": 0,
+      "threshold": 0,
+      "detail": "0 revenue rows lack a valid account."
+    }
+  ]
+}
