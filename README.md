@@ -4,7 +4,7 @@ End-to-end analytics engineering project for SaaS customer health, churn risk, r
 
 This project turns messy CRM, billing, product usage, support, and marketing data into a trusted local DuckDB warehouse with dimensions, facts, marts, data quality checks, executive readouts, and an interactive dashboard.
 
-## Why This Project Matters
+## Platform Capabilities
 
 Customer 360 is a familiar business problem across SaaS, fintech, healthcare, marketplaces, and B2B operations. It proves the core analytics engineering workflow:
 
