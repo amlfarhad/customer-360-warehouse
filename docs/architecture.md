@@ -1,6 +1,6 @@
 # Architecture
 
-SaaS Metrics is a local analytics engineering project that turns messy SaaS source data into tested business marts.
+Customer Analytics Warehouse is a local analytics engineering project that turns messy SaaS source data into tested business marts.
 
 ```mermaid
 flowchart LR

@@ -140,7 +140,7 @@ def write_dashboard_html(db_path: str | Path, output_path: str | Path) -> Path:
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>SaaS Metrics</title>
+  <title>Customer Analytics Warehouse</title>
   <style>
     body {{ margin: 28px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #172033; }}
     header {{ max-width: 1100px; margin-bottom: 24px; }}
@@ -151,7 +151,7 @@ def write_dashboard_html(db_path: str | Path, output_path: str | Path) -> Path:
 </head>
 <body>
   <header>
-    <h1>SaaS Metrics</h1>
+    <h1>Customer Analytics Warehouse</h1>
     <p>Revenue, churn risk, product adoption, and customer health from modeled CRM, billing, product, support, and marketing data.</p>
   </header>
   <section class="grid">

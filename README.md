@@ -1,4 +1,4 @@
-# SaaS Metrics
+# Customer Analytics Warehouse
 
 End-to-end analytics engineering project for SaaS customer health, churn risk, revenue retention, and product adoption.
 
