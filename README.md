@@ -1,4 +1,4 @@
-# Customer 360 Analytics Warehouse
+# SaaS Metrics
 
 End-to-end analytics engineering project for SaaS customer health, churn risk, revenue retention, and product adoption.
 
