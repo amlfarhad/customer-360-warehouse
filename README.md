@@ -90,7 +90,7 @@ The optional clean-browser smoke test uses Playwright with an installed Chromium
 
 ```bash
 python3 -m pip install -r requirements-dev.txt
-python3 /Users/amlfarhad/.agents/skills/webapp-testing/scripts/with_server.py \
+python3 /path/to/webapp-testing/scripts/with_server.py \
   --server "python3 -m http.server 4176 --directory app" --port 4176 \
   -- .venv/bin/python tests/browser_smoke.py
 ```
