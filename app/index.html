@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A reproducible, no-login customer-health decision workspace backed by a Python and DuckDB analytics warehouse."
+    />
+    <meta property="og:title" content="Customer health / decision workspace" />
+    <meta
+      property="og:description"
+      content="Prioritize customer accounts, inspect observed drivers, and trace decisions to source records."
+    />
+    <meta property="og:image" content="./favicon.svg" />
+    <title>Customer health / decision workspace</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#overview" aria-label="Customer health portfolio">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>
+            <span class="brand-kicker">Customer 360</span>
+            <span class="brand-title">Health desk</span>
+          </span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary navigation">
+          <a href="#overview" data-nav="overview">Portfolio</a>
+          <a href="#definitions" data-nav="definitions">Definitions &amp; lineage</a>
+        </nav>
+        <div class="topbar-meta">
+          <span class="demo-badge"><span class="status-dot" aria-hidden="true"></span> Synthetic sample</span>
+          <a
+            class="repo-link"
+            href="https://github.com/amlfarhad/customer-analytics-warehouse"
+            target="_blank"
+            rel="noreferrer"
+          >
+            View repository <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </header>
+
+      <main id="main-content" tabindex="-1">
+        <section id="loading-state" class="state state-loading" aria-live="polite">
+          <div class="loading-orbit" aria-hidden="true"></div>
+          <p class="eyebrow">Loading the sample workspace</p>
+          <h1>Reading the decision layer.</h1>
+          <div class="skeleton-line skeleton-line-wide"></div>
+          <div class="skeleton-line"></div>
+        </section>
+
+        <section id="error-state" class="state state-error" hidden aria-live="assertive">
+          <p class="eyebrow">Workspace unavailable</p>
+          <h1>We couldn’t load the generated data.</h1>
+          <p id="error-message">The static data file is missing or malformed.</p>
+          <button class="button button-primary" data-action="retry-load">Try again</button>
+        </section>
+
+        <div id="workspace" hidden>
+          <div id="view-root"></div>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <span>Customer Analytics Warehouse</span>
+        <span class="footer-separator" aria-hidden="true">•</span>
+        <span>Decision support over synthetic demo data</span>
+        <a href="https://github.com/amlfarhad/customer-analytics-warehouse" target="_blank" rel="noreferrer">GitHub ↗</a>
+      </footer>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  </body>
+</html>

@@ -31,3 +31,4 @@ def test_demo_cli_builds_complete_project_artifacts(tmp_path):
     assert (tmp_path / "data" / "warehouse" / "customer360.duckdb").exists()
     assert (tmp_path / "reports" / "customer_health_readout.md").exists()
     assert (tmp_path / "reports" / "dashboard.html").exists()
+    assert (tmp_path / "app" / "data" / "workspace.json").exists()

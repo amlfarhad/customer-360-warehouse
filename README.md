@@ -32,6 +32,15 @@ The demo writes:
 - `reports/data_quality_audit.md`
 - `reports/customer_health_readout.md`
 - `reports/dashboard.html`
+- `app/data/workspace.json`
+
+The `app/` directory is a dependency-free static customer-health decision workspace. Serve it locally after running the demo:
+
+```bash
+python3 -m http.server 4176 --directory app
+```
+
+Then open `http://127.0.0.1:4176`. The workflow starts with an attention queue, drills into account evidence, keeps observed facts separate from heuristic flags, and exports a queue CSV or account brief. Saved actions are local browser notes; there is no CRM writeback.
 
 ## CLI
 
@@ -40,6 +49,7 @@ python3 -m src.cli generate-data --workspace .
 python3 -m src.cli build-warehouse --workspace .
 python3 -m src.cli quality-audit --workspace .
 python3 -m src.cli write-readout --workspace .
+python3 -m src.cli write-workspace --workspace .
 python3 -m src.cli demo --workspace .
 ```
 
@@ -74,6 +84,15 @@ Sample outputs:
 
 ```bash
 python3 -m pytest tests -q
+```
+
+The optional clean-browser smoke test uses Playwright with an installed Chromium-compatible browser:
+
+```bash
+python3 -m pip install -r requirements-dev.txt
+python3 /Users/amlfarhad/.agents/skills/webapp-testing/scripts/with_server.py \
+  --server "python3 -m http.server 4176 --directory app" --port 4176 \
+  -- .venv/bin/python tests/browser_smoke.py
 ```
 
 ## Portfolio Summary

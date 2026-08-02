@@ -15,7 +15,7 @@ flowchart LR
     DIM --> M["Customer 360 Marts"]
     F --> M
     M --> Q["Quality Audit"]
-    M --> O["Executive Readout + Dashboard"]
+    M --> O["Executive Readout + Decision Workspace"]
 ```
 
 ## Layers
@@ -28,3 +28,5 @@ flowchart LR
 - `models/marts/`: customer health, churn risk, revenue retention, product adoption, and account summary marts.
 - `src/run_quality_checks.py`: validates sources and marts.
 - `src/write_readout.py`: writes Markdown and dashboard artifacts.
+- `src/write_workspace.py`: exports a deterministic JSON decision layer with queue rows, account source records, trends, metric definitions, lineage, source coverage, and the quality audit.
+- `app/`: dependency-free static UI for the operator queue, account investigation, action export, and trust layer.
